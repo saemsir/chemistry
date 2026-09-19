@@ -1,129 +1,1307 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Saem Physics — Understand, don't memorize</title>
-<meta name="description" content="Visual physics by Saem Sir — intuition, mathematics and problem solving for JEE, NEET and board students.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="manim.css">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Chemistry from first principles — a conceptual learning hub built around Donald Sadoway's publicly available lectures, with pathways for JEE, NEET and MIT-level learners."
+  />
+
+  <meta
+    name="theme-color"
+    content="#08110e"
+  />
+
+  <title>Sadoway Chemistry — Chemistry from First Principles</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="wordmark" href="#top"><span>∿</span> Saem Physics</a>
-    <nav class="site-nav" id="site-nav">
-      <a href="#ideas">Ideas</a><a href="#mechanics">Mechanics</a><a href="#library">Library</a>
-      <a href="https://www.youtube.com/@SaemPhysics" target="_blank" rel="noopener" class="button button-gold">YouTube ↗</a>
+
+  <!-- ==============================
+       PAGE BACKGROUND VISUAL
+  =============================== -->
+
+  <div class="page-glow glow-1"></div>
+  <div class="page-glow glow-2"></div>
+
+  <!-- ==============================
+       ANNOUNCEMENT BAR
+  =============================== -->
+
+  <div class="announcement" id="announcement">
+    <div class="announcement-inner">
+
+      <span class="announcement-label">
+        NEW
+      </span>
+
+      <span class="announcement-text">
+        Chemistry Learning Hub is being updated for JEE, NEET & MIT-level learners.
+      </span>
+
+      <a href="#lectures" class="announcement-link">
+        Explore lectures
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <button
+        class="announcement-close"
+        id="announcementClose"
+        aria-label="Close announcement"
+      >
+        ×
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- ==============================
+       NAVIGATION
+  =============================== -->
+
+  <header class="site-header" id="siteHeader">
+
+    <nav class="nav container">
+
+      <a href="#" class="brand">
+
+        <span class="brand-mark">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+        <span class="brand-text">
+          SADOWAY
+          <small>CHEMISTRY</small>
+        </span>
+
+      </a>
+
+      <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        aria-label="Open navigation"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="#concept">Concept</a>
+        <a href="#lectures">Lectures</a>
+        <a href="#path">Learning Path</a>
+        <a href="#instructor">Instructor</a>
+
+        <a
+          href="https://www.youtube.com/playlist?list=PLF83B8D8C87426E44"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta"
+        >
+          Watch on YouTube
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><i></i><i></i><i></i></button>
-  </div>
-</header>
 
-<main id="main">
-<section class="hero" id="top">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <p class="eyebrow"><b></b> PHYSICS FOR CURIOUS MINDS</p>
-      <h1>Understand the <em>why</em> behind physics.</h1>
-      <p class="hero-lead">Visual explanations, precise mathematics and problem-solving that makes the formula feel inevitable.</p>
-      <div class="hero-actions">
-        <a class="button button-gold" href="#mechanics">Enter the visual library ↓</a>
-        <a class="text-link" href="https://www.youtube.com/@SaemPhysics" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+  </header>
+
+
+  <!-- ==============================
+       HERO
+  =============================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            CHEMISTRY · FIRST PRINCIPLES
+          </div>
+
+          <h1>
+            Understand
+            <em>chemistry.</em>
+            Don't just memorize it.
+          </h1>
+
+          <p class="hero-description">
+            A concept-first learning hub built around publicly available
+            lectures associated with Donald Sadoway, designed to help
+            ambitious learners connect chemistry with matter, energy,
+            atoms, ions and real physical systems.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#lectures" class="btn btn-primary">
+              Explore Lectures
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/playlist?list=PLF83B8D8C87426E44"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              <i class="fa-brands fa-youtube"></i>
+              Original Playlist
+            </a>
+
+          </div>
+
+          <div class="hero-note">
+
+            <span class="hero-note-dot"></span>
+
+            <span>
+              Conceptual chemistry • JEE • NEET • MIT-level exploration
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+          <div class="visual-caption visual-caption-top">
+            ELECTROCHEMICAL SYSTEM
+          </div>
+
+          <div class="visual-frame">
+
+            <canvas id="chemCanvas"></canvas>
+
+            <div class="canvas-overlay">
+
+              <div class="atom-label">
+                <span class="label-line"></span>
+                ION MOTION
+              </div>
+
+              <div class="atom-label label-right">
+                ELECTRON FLOW
+                <span class="label-line"></span>
+              </div>
+
+              <div class="visual-equation">
+                <span>ΔG</span>
+                <strong>→</strong>
+                <span>work</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="visual-caption visual-caption-bottom">
+            <span>01</span>
+            MATTER · ENERGY · CHARGE
+          </div>
+
+        </div>
+
       </div>
-      <p class="hero-note">JEE · NEET · CBSE · Bihar Board · NCERT</p>
+
+      <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CONCEPT INTRO
+    =============================== -->
+
+    <section class="section concept-section" id="concept">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            THE IDEA
+          </div>
+
+          <h2>
+            From equations
+            <span>to physical intuition.</span>
+          </h2>
+
+          <p>
+            Chemistry becomes dramatically easier when equations are connected
+            to actual physical systems. The goal here is to move from
+            <strong>symbol → mechanism → intuition → application.</strong>
+          </p>
+
+        </div>
+
+
+        <div class="concept-grid">
+
+          <article class="concept-card large-card">
+
+            <div class="card-number">01</div>
+
+            <div class="concept-illustration">
+              <div class="orbit orbit-a"></div>
+              <div class="orbit orbit-b"></div>
+
+              <div class="nucleus">
+                <span>+</span>
+                <span>+</span>
+              </div>
+
+              <div class="electron e1"></div>
+              <div class="electron e2"></div>
+              <div class="electron e3"></div>
+
+            </div>
+
+            <div class="concept-card-copy">
+
+              <span class="mini-label">
+                MICROSCOPIC
+              </span>
+
+              <h3>
+                See what the particles are doing.
+              </h3>
+
+              <p>
+                Atoms, ions, electrons and bonds stop being abstract symbols
+                when their motion and interaction are visualised.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="concept-card">
+
+            <div class="card-number">02</div>
+
+            <span class="mini-label">
+              MACROSCOPIC
+            </span>
+
+            <h3>
+              Connect the microscopic picture to measurable quantities.
+            </h3>
+
+            <div class="formula-box">
+              <span>energy</span>
+              <span>charge</span>
+              <span>temperature</span>
+              <span>potential</span>
+            </div>
+
+          </article>
+
+
+          <article class="concept-card">
+
+            <div class="card-number">03</div>
+
+            <span class="mini-label">
+              APPLICATION
+            </span>
+
+            <h3>
+              Turn understanding into problem-solving power.
+            </h3>
+
+            <div class="arrow-chain">
+
+              <span>concept</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+              <span>equation</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+              <span>problem</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         STATS
+    =============================== -->
+
+    <section class="stats-section">
+
+      <div class="container">
+
+        <div class="stats-wrap">
+
+          <div class="stat">
+
+            <div class="stat-number">
+              <span class="counter" data-target="1">0</span>
+            </div>
+
+            <div class="stat-label">
+              CORE LECTURE ARCHIVE
+            </div>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-number">
+              <span class="counter" data-target="3">0</span>
+            </div>
+
+            <div class="stat-label">
+              LEARNING PATHWAYS
+            </div>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-number">
+              <span class="counter" data-target="24">0</span>
+              <small>/7</small>
+            </div>
+
+            <div class="stat-label">
+              SELF-PACED ACCESS
+            </div>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="stat-number">
+              ∞
+            </div>
+
+            <div class="stat-label">
+              DEPTH OF PRACTICE
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         LECTURES
+    =============================== -->
+
+    <section class="section lecture-section" id="lectures">
+
+      <div class="container">
+
+        <div class="section-heading lecture-heading">
+
+          <div>
+
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              LECTURE ARCHIVE
+            </div>
+
+            <h2>
+              Learn directly from
+              <span>the source.</span>
+            </h2>
+
+          </div>
+
+          <p>
+            Explore the publicly available lecture archive below.
+            Use it as a conceptual foundation, then pair it with
+            syllabus-specific problem solving.
+          </p>
+
+        </div>
+
+
+        <div class="lecture-layout">
+
+          <div class="youtube-card">
+
+            <div class="video-top">
+
+              <span class="video-tag">
+                FEATURED PLAYLIST
+              </span>
+
+              <a
+                href="https://www.youtube.com/playlist?list=PLF83B8D8C87426E44"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                OPEN YOUTUBE
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLF83B8D8C87426E44"
+                title="Donald Sadoway Chemistry Lecture Playlist"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+
+            </div>
+
+          </div>
+
+
+          <aside class="lecture-sidebar">
+
+            <div class="sidebar-label">
+              STUDY WITH A QUESTION
+            </div>
+
+            <h3>
+              Don't just ask
+              <em>what?</em>
+              Ask <em>why?</em>
+            </h3>
+
+            <div class="question-list">
+
+              <div class="question-item">
+                <span>01</span>
+                Why does charge move?
+              </div>
+
+              <div class="question-item">
+                <span>02</span>
+                What drives a reaction?
+              </div>
+
+              <div class="question-item">
+                <span>03</span>
+                Where does the energy go?
+              </div>
+
+              <div class="question-item">
+                <span>04</span>
+                What changes at equilibrium?
+              </div>
+
+            </div>
+
+            <a href="#path" class="text-link">
+              See the learning path
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </aside>
+
+        </div>
+
+        <div class="lecture-disclaimer">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          <p>
+            This website is an independent learning interface. The original
+            lecture material is not represented as an official JEE, NEET or
+            MIT admissions/preparation course.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         LEARNING PATH
+    =============================== -->
+
+    <section class="section path-section" id="path">
+
+      <div class="container">
+
+        <div class="section-heading center-heading">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            THREE STEP METHOD
+          </div>
+
+          <h2>
+            Watch.
+            <span>Visualize.</span>
+            Apply.
+          </h2>
+
+          <p>
+            A simple framework for turning high-level lectures into
+            exam-ready understanding.
+          </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+          <div class="timeline-line"></div>
+
+
+          <!-- STEP 1 -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-node">
+              01
+            </div>
+
+            <div class="timeline-content">
+
+              <span class="step-label">
+                STEP 01
+              </span>
+
+              <h3>
+                WATCH
+              </h3>
+
+              <p>
+                Start with the original lecture. Listen for mechanisms,
+                assumptions and the physical meaning behind equations.
+              </p>
+
+            </div>
+
+            <div class="timeline-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+
+          </div>
+
+
+          <!-- STEP 2 -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-node">
+              02
+            </div>
+
+            <div class="timeline-content">
+
+              <span class="step-label">
+                STEP 02
+              </span>
+
+              <h3>
+                VISUALIZE
+              </h3>
+
+              <p>
+                Redraw the chemistry. Track atoms, ions, electrons,
+                energy transfer and reaction direction.
+              </p>
+
+            </div>
+
+            <div class="timeline-icon">
+              <i class="fa-solid fa-atom"></i>
+            </div>
+
+          </div>
+
+
+          <!-- STEP 3 -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-node">
+              03
+            </div>
+
+            <div class="timeline-content">
+
+              <span class="step-label">
+                STEP 03
+              </span>
+
+              <h3>
+                APPLY
+              </h3>
+
+              <p>
+                Convert understanding into equations, numerical problems,
+                conceptual questions and exam-style applications.
+              </p>
+
+            </div>
+
+            <div class="timeline-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TARGET PATHWAYS
+    =============================== -->
+
+    <section class="section pathway-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            FOR DIFFERENT LEARNERS
+          </div>
+
+          <h2>
+            One conceptual base.
+            <span>Different goals.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="pathway-grid">
+
+          <article class="pathway-card">
+
+            <span class="pathway-number">01</span>
+
+            <div class="pathway-icon">
+              <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <h3>JEE</h3>
+
+            <p>
+              Build deeper physical intuition, then connect it to
+              quantitative problem solving and advanced chemistry questions.
+            </p>
+
+            <a href="#enquiry" class="card-link">
+              Build a plan
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="pathway-card featured">
+
+            <span class="pathway-number">02</span>
+
+            <div class="pathway-icon">
+              <i class="fa-solid fa-dna"></i>
+            </div>
+
+            <h3>NEET</h3>
+
+            <p>
+              Strengthen conceptual chemistry before moving into
+              reaction patterns, numerical work and exam-oriented revision.
+            </p>
+
+            <a href="#enquiry" class="card-link">
+              Build a plan
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+
+          <article class="pathway-card">
+
+            <span class="pathway-number">03</span>
+
+            <div class="pathway-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>MIT-level</h3>
+
+            <p>
+              Use the lectures as a gateway into deeper chemistry,
+              electrochemistry, materials and first-principles reasoning.
+            </p>
+
+            <a href="#lectures" class="card-link">
+              Explore lectures
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         INTERACTIVE CHEMISTRY
+    =============================== -->
+
+    <section class="section interactive-section">
+
+      <div class="container interactive-grid">
+
+        <div class="interactive-copy">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            INTERACTIVE CHEMISTRY
+          </div>
+
+          <h2>
+            Chemistry is
+            <span>movement.</span>
+          </h2>
+
+          <p>
+            Electrons move. Ions move. Energy moves.
+            Reactions happen because these systems evolve toward
+            physically meaningful states.
+          </p>
+
+          <p>
+            Use this visual as a simple conceptual reminder:
+            <strong>track the particles, then interpret the equation.</strong>
+          </p>
+
+          <button class="btn btn-outline" id="toggleParticles">
+            Pause animation
+            <i class="fa-solid fa-pause"></i>
+          </button>
+
+        </div>
+
+
+        <div class="interactive-box">
+
+          <div class="interactive-top">
+
+            <span>
+              LIVE SYSTEM
+            </span>
+
+            <span class="live-indicator">
+              <span></span>
+              RUNNING
+            </span>
+
+          </div>
+
+          <canvas id="electroCanvas"></canvas>
+
+          <div class="interactive-label label-a">
+            ANODE
+          </div>
+
+          <div class="interactive-label label-b">
+            CATHODE
+          </div>
+
+          <div class="interactive-label label-c">
+            ELECTROLYTE
+          </div>
+
+          <div class="interactive-formula">
+            e⁻ → external circuit
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         INSTRUCTOR
+    =============================== -->
+
+    <section class="section instructor-section" id="instructor">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            MEET THE INSTRUCTOR
+          </div>
+
+          <h2>
+            Donald R.
+            <span>Sadoway</span>
+          </h2>
+
+          <p>
+            Scientist, educator and researcher associated with the study
+            of materials, electrochemistry and energy-related systems.
+          </p>
+
+        </div>
+
+
+        <div class="instructor-grid">
+
+          <!-- IMAGE PLACEHOLDER -->
+
+          <div class="instructor-image-wrap">
+
+            <div class="portrait-placeholder">
+
+              <div class="portrait-grid"></div>
+
+              <div class="portrait-icon">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+
+              <div class="portrait-text">
+                <span>PORTRAIT</span>
+                <small>
+                  Replace this placeholder with an authorised image.
+                </small>
+              </div>
+
+            </div>
+
+            <div class="image-caption">
+              DONALD R. SADOWAY
+            </div>
+
+          </div>
+
+
+          <!-- BIO -->
+
+          <div class="instructor-copy">
+
+            <span class="mini-label">
+              TEACHING THROUGH PHYSICAL REASONING
+            </span>
+
+            <h3>
+              Understand the system
+              before manipulating the symbols.
+            </h3>
+
+            <div class="bio-lines">
+
+              <div class="bio-line">
+                <span class="bio-icon">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+
+                <p>
+                  MIT faculty member associated with materials science,
+                  chemistry and electrochemical systems.
+                </p>
+              </div>
+
+
+              <div class="bio-line">
+                <span class="bio-icon">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+
+                <p>
+                  Strong emphasis on connecting fundamental chemistry
+                  with real physical technologies and materials.
+                </p>
+              </div>
+
+
+              <div class="bio-line">
+                <span class="bio-icon">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+
+                <p>
+                  Particularly valuable for learners who want to understand
+                  why a chemical process behaves the way it does.
+                </p>
+              </div>
+
+
+              <div class="bio-line">
+                <span class="bio-icon">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+
+                <p>
+                  Useful conceptual material for students moving from
+                  textbook chemistry toward university-level thinking.
+                </p>
+              </div>
+
+            </div>
+
+            <a
+              href="https://www.youtube.com/playlist?list=PLF83B8D8C87426E44"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              Explore the lectures
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ENQUIRY
+    =============================== -->
+
+    <section class="section enquiry-section" id="enquiry">
+
+      <div class="container enquiry-layout">
+
+        <div class="enquiry-intro">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            LEARNING ENQUIRY
+          </div>
+
+          <h2>
+            Have a learning
+            <span>goal?</span>
+          </h2>
+
+          <p>
+            Tell us what you are preparing for and what level of chemistry
+            you want to reach.
+          </p>
+
+          <div class="enquiry-points">
+
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              JEE
+            </span>
+
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              NEET
+            </span>
+
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              Advanced Chemistry
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- GLASS CARD -->
+
+        <div class="enquiry-card">
+
+          <div class="glass-shine"></div>
+
+          <div class="enquiry-card-top">
+
+            <span class="mini-label">
+              START HERE
+            </span>
+
+            <span class="lock-icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+
+          </div>
+
+          <form id="enquiryForm">
+
+            <div class="field-group">
+
+              <label for="studentName">
+                Student Name
+              </label>
+
+              <input
+                type="text"
+                id="studentName"
+                name="studentName"
+                placeholder="Your name"
+                required
+              />
+
+            </div>
+
+
+            <div class="field-group">
+
+              <label for="mobile">
+                Mobile Number
+              </label>
+
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="+91 XXXXX XXXXX"
+                inputmode="numeric"
+                required
+              />
+
+            </div>
+
+
+            <div class="field-group">
+
+              <label for="course">
+                Learning Goal
+              </label>
+
+              <select id="course" name="course" required>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="JEE">
+                  JEE
+                </option>
+
+                <option value="NEET">
+                  NEET
+                </option>
+
+                <option value="MIT">
+                  MIT / University-level
+                </option>
+
+                <option value="Advanced">
+                  Advanced Chemistry
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+
+              Enquire Now
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+            <div
+              class="form-message"
+              id="formMessage"
+              aria-live="polite"
+            ></div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FINAL CTA
+    =============================== -->
+
+    <section class="final-cta">
+
+      <div class="container final-cta-inner">
+
+        <div>
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            KEEP EXPLORING
+          </div>
+
+          <h2>
+            Chemistry becomes
+            <em>beautiful</em>
+            when it makes sense.
+          </h2>
+
+        </div>
+
+        <a href="#lectures" class="round-arrow">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==============================
+       FOOTER
+  =============================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#" class="brand">
+
+          <span class="brand-mark">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="brand-text">
+            SADOWAY
+            <small>CHEMISTRY</small>
+          </span>
+
+        </a>
+
+        <p>
+          A conceptual chemistry learning interface inspired by
+          scientific storytelling and first-principles thinking.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#concept">Concept</a>
+        <a href="#lectures">Lectures</a>
+        <a href="#path">Learning Path</a>
+        <a href="#instructor">Instructor</a>
+
+      </div>
+
+
+      <div class="footer-right">
+
+        <a
+          href="https://www.youtube.com/playlist?list=PLF83B8D8C87426E44"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="youtube-link"
+        >
+          <i class="fa-brands fa-youtube"></i>
+          YouTube Playlist
+        </a>
+
+        <span>
+          © <span id="year"></span> Sadoway Chemistry
+        </span>
+
+      </div>
+
     </div>
 
-    <div class="manim-stage reveal">
-      <video autoplay muted loop playsinline preload="metadata" poster="assets/manim/saem-hero-poster.svg">
-        <source src="assets/manim/saem-hero.mp4" type="video/mp4">
-      </video>
-      <div class="fallback-equation" aria-hidden="true">
-        <span>v(t)</span><small>=</small><span>dx</span><small>/</small><span>dt</span>
-      </div>
-      <div class="manim-caption"><b>SAEM VISUAL PHYSICS</b> · slope → velocity</div>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<section class="statement reveal" id="ideas">
-<div class="container statement-grid">
-<span class="section-number">01</span>
-<div><p class="eyebrow">THE IDEA</p><h2>Don't decorate the mathematics. <em>Animate it.</em></h2>
-<p>Every visual should answer a physics question: what changes, what stays fixed, and why does the equation describe it?</p></div>
-</div>
-</section>
 
-<section class="section" id="mechanics">
-<div class="container">
-<div class="section-heading reveal">
-<div><p class="eyebrow">THE FIRST VISUAL COURSE</p><h2>Mechanics, from intuition to equation.</h2></div>
-</div>
-<div class="concept-grid">
-<article class="concept reveal">
-<div class="concept-visual">
-  <div class="vector-ball"></div><div class="vector-arrow"></div>
-  <span class="math-label">F = ma</span>
-</div>
-<div class="concept-body"><small>01 · NEWTON'S LAWS</small><h3>Force becomes acceleration.</h3>
-<p>Start with a physical picture, then let the vector equation emerge from it.</p>
-<a href="https://www.youtube.com/@SaemPhysics" target="_blank">Explore lesson ↗</a></div>
-</article>
+  <!-- ==============================
+       BACK TO TOP
+  =============================== -->
 
-<article class="concept reveal">
-<div class="concept-visual graph">
-  <div class="axis x"></div><div class="axis y"></div><div class="curve"></div>
-  <span class="math-label">x(t) → v(t)</span>
-</div>
-<div class="concept-body"><small>02 · KINEMATICS</small><h3>See what a derivative means.</h3>
-<p>Position, slope and velocity become one continuous visual argument.</p>
-<a href="https://www.youtube.com/@SaemPhysics" target="_blank">Explore lesson ↗</a></div>
-</article>
+  <button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-<article class="concept reveal">
-<div class="concept-visual orbit">
-  <div class="orbit-ring"></div><div class="orbit-dot"></div>
-  <span class="math-label">L = r × p</span>
-</div>
-<div class="concept-body"><small>03 · ROTATION</small><h3>Angular momentum as geometry.</h3>
-<p>Turn the cross product from notation into something you can see.</p>
-<a href="https://www.youtube.com/@SaemPhysics" target="_blank">Explore lesson ↗</a></div>
-</article>
-</div>
-</div>
-</section>
 
-<section class="section section-alt" id="library">
-<div class="container">
-<div class="section-heading reveal">
-<div><p class="eyebrow">THE SAEM LIBRARY</p><h2>Ideas worth taking slowly.</h2></div>
-<a class="text-link" href="https://www.youtube.com/@SaemPhysics/playlists" target="_blank">All playlists ↗</a>
-</div>
-<div class="library-grid">
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>MECHANICS</small><h3>Motion · Forces · Energy</h3><p>Build the physical picture before touching the formula.</p><b>Open path ↗</b></a>
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>MATHEMATICAL TOOLS</small><h3>Maths for Physics</h3><p>Vectors, trigonometry, graphs, calculus and the language of physics.</p><b>Open path ↗</b></a>
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>WAVES</small><h3>Oscillation → Wave</h3><p>See a mathematical function become a physical disturbance.</p><b>Open path ↗</b></a>
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>ELECTROMAGNETISM</small><h3>Fields · Potential · Circuits</h3><p>Turn invisible fields into diagrams you can reason with.</p><b>Open path ↗</b></a>
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>OPTICS</small><h3>Rays · Images · Waves</h3><p>Follow light through geometry and physical intuition.</p><b>Open path ↗</b></a>
-<a class="library-card reveal" href="https://www.youtube.com/@SaemPhysics" target="_blank"><small>MODERN PHYSICS</small><h3>Quantum · Nuclear · Relativity</h3><p>Use visual models carefully—without pretending they are the physics itself.</p><b>Open path ↗</b></a>
-</div>
-</div>
-</section>
+  <script src="script.js"></script>
 
-<section class="cta">
-<div class="container">
-<p class="eyebrow">YOUR NEXT QUESTION IS WAITING</p>
-<h2>Come learn physics <em>visually.</em></h2>
-<a class="button button-light" href="https://www.youtube.com/@SaemPhysics" target="_blank">Go to Saem Physics ↗</a>
-</div>
-</section>
-</main>
-
-<footer><div class="container footer-inner"><span>© <span id="year"></span> Saem Physics</span><a href="mailto:msaemsir@gmail.com">msaemsir@gmail.com</a><a href="https://www.youtube.com/@SaemPhysics" target="_blank">YouTube ↗</a></div></footer>
-<script src="script.js"></script>
 </body>
-</html>
+  </html>
